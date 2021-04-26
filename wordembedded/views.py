@@ -7,18 +7,22 @@ from flask import Flask, render_template, request, redirect
 from gensim.models import KeyedVectors
 class Models: 
     def __init__(self):
-        #Creating CBOW WORD2VEC model 
+        # #Creating CBOW WORD2VEC model 
         # modelW2VCbow = KeyedVectors.load_word2vec_format("CBOWw2v.txt")
-        modelW2VCbow = KeyedVectors.load_word2vec_format("https://drive.google.com/file/d/1--IEVHqmR7lfQ8IqZ4teXXoJ16tEe1bS/view?usp=sharing")
-        #Creating Skip Gram WORD2VEC model 
+        # #Creating Skip Gram WORD2VEC model 
         # modelW2VSG = KeyedVectors.load_word2vec_format("SGw2v.txt")
-        modelW2VSG = KeyedVectors.load_word2vec_format("https://drive.google.com/file/d/1j_SGqCiMJVmMUbzlFRTh-id04FeDEd8s/view?usp=sharing")
-        #Creating CBOW FastText Model
+        # #Creating CBOW FastText Model
         # modelFTCBOW = KeyedVectors.load_word2vec_format("CBOWFT.txt")
-        modelFTCBOW = KeyedVectors.load_word2vec_format("https://drive.google.com/file/d/1ofKp-GqEa-_9MWk16PWK042aYDzX22rt/view?usp=sharing")
-        #Creating Skip Gram FastText Model
+        # #Creating Skip Gram FastText Model
         # modelFTSG = KeyedVectors.load_word2vec_format("SGFT.txt")
-        modelFTSG = KeyedVectors.load_word2vec_format("https://drive.google.com/file/d/1HiFBRMsUngoKSwbBak6ZXiFu-3mZMLYf/view?usp=sharing")
+        #Creating CBOW WORD2VEC model 
+        modelW2VCbow = KeyedVectors.load_word2vec_format("model.txt")
+        #Creating Skip Gram WORD2VEC model 
+        modelW2VSG = KeyedVectors.load_word2vec_format("model.txt")
+        #Creating CBOW FastText Model
+        modelFTCBOW = KeyedVectors.load_word2vec_format("model.txt")
+        #Creating Skip Gram FastText Model
+        modelFTSG = KeyedVectors.load_word2vec_format("model.txt")
         self.modelW2VCbow = modelW2VCbow 
         self.modelW2VSG = modelW2VSG 
         self.modelFTCBOW = modelFTCBOW
